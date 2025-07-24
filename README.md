@@ -4,7 +4,6 @@
 <a href="https://www.producthunt.com/products/n8n2mcp-n8n-workflow-into-mcp-servers?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-n8n2mcp" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=995941&theme=light&t=1753173693440" alt="N8N2MCP - Turn&#0032;your&#0032;N8N&#0032;workflow&#0032;to&#0032;MCP&#0032;servers&#0032;with&#0032;just&#0032;3&#0032;clicks | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 #### Transform your N8N workflows into MCP servers instantly 
-#### [🎯 Try the Live Demo](https://p2rdr5jbej.us-east-1.awsapprunner.com/)
 
 A comprehensive platform that converts N8N workflows into Model Context Protocol (MCP) servers, enabling seamless integration with AI assistants like Claude, Cursor, and other MCP-compatible platforms. Build powerful automation tools using N8N's visual workflow editor and deploy them as callable AI functions.
 ![Demo](demo.gif)
@@ -150,14 +149,14 @@ graph TB
 ### Creating MCP Servers from N8N Workflows
 
 #### Method 1: Import N8N Templates
-1. **Browse Templates**: Visit the marketplace at http://localhost:5000
-2. **Import Template**: Enter an N8N template ID from n8n.io
+1. **Browse Templates**: Visit the [N8N template](https://n8n.io/workflows/)
+2. **Import Template**: Enter an N8N template URL from n8n.io
 3. **Configure Credentials**: Fill in required API keys and service credentials
 4. **Deploy Workflow**: Click deploy to create the workflow in your N8N instance
 5. **MCP Server Created**: Automatically generates an MCP server endpoint
 
 #### Method 2: Upload Custom Workflows  
-1. **Upload JSON**: Upload your N8N workflow JSON file
+1. **Upload JSON**: Upload your N8N workflow JSON file / Copy and paste your JSON workflow
 2. **Review Analysis**: Check detected nodes and required credentials
 3. **Configure & Deploy**: Fill credentials and deploy to N8N
 4. **Access MCP Server**: Use the generated MCP endpoint in AI tools

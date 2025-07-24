@@ -2971,6 +2971,13 @@
         function displayUserUploadedWorkflows(workflows) {
             const container = document.getElementById('userWorkflowsContainer');
             if (!container) return;
+            
+            // Debug: Log the first workflow to see what fields are available
+            if (workflows.length > 0) {
+                console.log('Debug - First workflow data:', workflows[0]);
+                console.log('Debug - created_at field:', workflows[0].created_at);
+                console.log('Debug - All workflow fields:', Object.keys(workflows[0]));
+            }
 
             if (workflows.length === 0) {
                 container.innerHTML = `
@@ -2996,7 +3003,7 @@
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                         <small style="color: #666;">
                             <i class="fas fa-calendar me-1"></i>
-                            ${new Date(workflow.created_at).toLocaleDateString()}
+                            ${workflow.created_at ? new Date(workflow.created_at).toLocaleDateString() : 'Date unavailable'}
                         </small>
                         <small style="color: #666;">
                             <i class="fas fa-database me-1"></i>

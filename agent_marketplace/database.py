@@ -455,6 +455,13 @@ class SupabaseManager:
                         workflow_data['credentials_required'] = []
                     
                     print(f"   Final credentials_required: {workflow_data['credentials_required']}")
+                    
+                    # Ensure created_at is included in the response
+                    if 'created_at' not in workflow_data:
+                        print(f"   ⚠️ WARNING: created_at field missing for workflow {template_id}")
+                    else:
+                        print(f"   ✅ created_at present: {workflow_data['created_at']}")
+                    
                     workflows.append(workflow_data)
             
             return workflows
